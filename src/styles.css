@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+.loader {
+  position: absolute;
+  left: 45.5%;
+  top: 32%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(247, 173, 36);;
+  border-bottom: 16px solid rgb(247, 173, 36);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#contentDiv{
+  position: fixed;
+  top:75px;
+  right:0px;
+  left: 0px;
+  height: 88vh;
+  overflow-y: auto;
+}
