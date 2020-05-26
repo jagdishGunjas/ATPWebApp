@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/55912305-a161-438d-aca8-d610e6ad8cea/resourceGroups/Angular9App/providers/Microsoft.Web/sites/ATPWebApp",
+    "appService.deploySubpath": "dist\\ATPAngularWebApp"
+}

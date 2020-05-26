@@ -1,0 +1,95 @@
+ <!--Panel Item Generation-->
+ <div class="panel panel-warning">
+  <div class="panel-heading">
+    <div class="inline block text-center">
+      <h4 class="panel-title font-weight-bold">Item Generation</h4>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-default" *ngFor="let item of invoiceData.ItmGenData">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Item Number
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.ItmNum" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Quantity
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.Quantity" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              UOM
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.UOM" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Net Item Value
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.NetItmValue" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Description
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.Description" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Weight Unit
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.WgtUnit" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Total Weight
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.TotalWgt" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Total Item Price
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.TotalItemPrice" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group">
+            <label class="control-label">
+              Plant
+            </label>
+            <input type="text" class="form-control" [(ngModel)]="item.Plant" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <button class="btn btn-warning btn-sm pull-right" style="margin-right: 15px;" (click)="AddHdrParners()">
+        Add HDR Partners</button>
+    </div>
+  </div>
+</div>

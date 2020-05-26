@@ -1,0 +1,53 @@
+<div id="contentDiv">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div  class="row">
+
+    <div class="col-sm-4 col-sm-offset-4">
+      <span class="badge">User Login</span>
+      <div class="imgcontainer">
+        <img src="./assets/Images/user-icon.png" alt="Avatar" class="avatar">
+      </div>
+      <div class="form-group">
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input type="text" placeholder="Enter Username" formControlName="username" class="input-field"
+            [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        </div>
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <span *ngIf="f.username.errors.required" style="color: red; font-size: small; font-weight: bold;">
+            * Please enter a Username
+          </span>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input type="password" formControlName="password"
+          class="input-field" placeholder="Enter Password" *ngIf="isActive"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+
+        <input type="text" formControlName="password" value="{{f.password.value}}"
+          class="input-field" placeholder="Enter Password" *ngIf="!isActive"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+
+        <i class="fa fa-eye-slash input-icon" style="background-color: white;" *ngIf="isActive" (click)="isActive=false"></i>
+        <i class="fa fa-eye input-icon" style="background-color: white;" *ngIf="!isActive" (click)="isActive=true"></i>
+      </div>
+      <div *ngIf="submitted && f.password.errors" class="help-block">
+        <span style="color: red; font-size: small; font-weight: bold;" *ngIf="f.password.errors.required">
+          * Please enter a password
+        </span>
+      </div>
+
+      <div class="form-group">
+        <button [disabled]="loading" class="btn">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Login
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <div *ngIf="loading" class="loader"></div>
+</form>
+</div>

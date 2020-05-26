@@ -1,0 +1,123 @@
+form {
+  margin-top: 10px;
+  padding: 60px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 50%;
+  border-radius: 50%;
+
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.icon {
+  padding: 10px;
+  background: black;
+  color: silver;
+  min-width: 50px;
+  text-align: center;
+  border-left: 5px solid rgb(247, 173, 36);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid black;
+  border-right: 4px solid rgb(247, 173, 36);
+}
+
+.input-field:focus {
+  border: 2px solid rgb(247, 173, 36);
+}
+
+.input-icon{
+  font-weight: bold;
+  font-size: large;
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  box-shadow: 3.5px 4px rgb(247, 173, 36);
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: black;
+  border-radius: 3px;
+  width:100%;
+  margin-bottom: 7px;
+  /* box-shadow: 3.5px 4px rgb(247, 173, 36); */
+  border-left: 8px solid rgb(247, 173, 36);
+  border-right: 8px solid rgb(247, 173, 36);
+}
+.is-invalid{
+  border: 2px solid red;
+}
+
+.invalid-feedback{
+  color: red;
+  font-size:900;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+.loader {
+  position: absolute;
+  left: 45.5%;
+  top: 28%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(247, 173, 36);;
+  border-bottom: 16px solid rgb(247, 173, 36);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}

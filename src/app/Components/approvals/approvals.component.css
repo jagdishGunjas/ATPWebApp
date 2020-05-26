@@ -1,0 +1,32 @@
+.loader {
+  position: absolute;
+  left: 45.5%;
+  top: 35%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(247, 173, 36);;
+  border-bottom: 16px solid rgb(247, 173, 36);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 2px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 3;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: black;
+  border-radius: 3px;
+  width:100%;
+  margin-bottom:1%;
+  border-left: 8px solid rgb(247, 173, 36);
+  border-right: 8px solid rgb(247, 173, 36);
+}

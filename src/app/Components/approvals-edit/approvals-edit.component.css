@@ -1,0 +1,48 @@
+.panel-default {
+  padding: 5px !important;
+}
+.panel-warning {
+  border: 2px solid rgb(241, 186, 83);
+}
+
+.panel-warning .panel-heading {
+  background-color: rgb(241, 178, 59);;
+  color: white;
+  font-weight: bolder !important;
+  font-family: cursive;
+  font-size: x-large;
+}
+
+#dt{
+  max-width: 600px;
+  margin: 0 auto;
+  }
+  /* #dt th, td {
+  white-space: nowrap;
+  min-width: 125px;
+  text-align: center;
+  } */
+
+  .tableRow{
+  white-space: nowrap;
+  min-width: 125px;
+  text-align: center;
+  }
+  #pdf {
+    position: fixed;
+    top:75px;
+    right:0px;
+    height: 87.5vh;
+   }
+   iframe {
+    width: 100%;
+    height: 78vh;
+   }
+   #invoiceContent{
+     overflow-y:scroll;
+   }
+/* #addItems{
+  position: absolute;
+  right: 10px;
+  bottom: 1px;
+} */

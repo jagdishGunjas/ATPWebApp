@@ -1,0 +1,19 @@
+/* .alert-danger {
+  border: 2px solid rgb(207, 11, 11) !important;
+  color: red !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+} */
+
+
+#alertContent{
+  position: fixed;
+  top:75px;
+  right:0px;
+  left: 0px;
+  height: 88vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+

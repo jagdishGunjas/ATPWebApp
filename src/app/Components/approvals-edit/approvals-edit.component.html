@@ -1,0 +1,374 @@
+<div class="container-fluid">
+  <div class="row">
+    <div id="contentDiv" class="col-sm-6">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <div class="inline block text-center">
+            <h4 class="panel-title font-weight-bold">Invoice Details</h4>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <label class="control-label">
+              Invoice Number
+            </label>
+            <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.InvoiceNumber" />
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Currency
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.CURCY" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Invoice Date
+                </label>
+                <div class="input-group">
+                  <input type="text" class="form-control input-sm" bsDatepicker #invoiceDate="bsDatepicker"
+                  [(ngModel)]="invoiceData.InvoiceDate" [bsConfig]="{containerClass: 'theme-orange'}">
+                  <div class="input-group-btn">
+                    <button class="btn btn-warning btn-sm"
+                            (click)="invoiceDate.show()"
+                            [attr.aria-expanded]="invoiceDate.isOpen"
+                            type="button">
+                            <i class="fa fa-calendar"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Po
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.Po" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  PODate
+                </label>
+                <div class="input-group">
+                  <input type="text" class="form-control input-sm" bsDatepicker #poDate="bsDatepicker"
+                  [(ngModel)]="invoiceData.PODate" [bsConfig]="{containerClass: 'theme-orange'}">
+                  <div class="input-group-btn">
+                    <button class="btn btn-warning btn-sm"
+                            (click)="poDate.show()"
+                            [attr.aria-expanded]="poDate.isOpen"
+                            type="button">
+                            <i class="fa fa-calendar"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Ship Date
+                </label>
+                <div class="input-group">
+                  <input type="text" class="form-control input-sm" bsDatepicker #shipDate="bsDatepicker"
+                  [(ngModel)]="invoiceData.ShipDate" [bsConfig]="{containerClass: 'theme-orange'}">
+                  <div class="input-group-btn">
+                    <button class="btn btn-warning btn-sm"
+                            (click)="shipDate.show()"
+                            [attr.aria-expanded]="shipDate.isOpen"
+                            type="button">
+                            <i class="fa fa-calendar"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  DueDate
+                </label>
+                <div class="input-group">
+                  <input type="text" class="form-control input-sm" bsDatepicker #dueDate="bsDatepicker"
+                  [(ngModel)]="invoiceData.DueDate" [bsConfig]="{containerClass: 'theme-orange'}">
+                  <div class="input-group-btn">
+                    <button class="btn btn-warning btn-sm"
+                            (click)="dueDate.show()"
+                            [attr.aria-expanded]="dueDate.isOpen"
+                            type="button">
+                      <i class="fa fa-calendar"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  SubTotal
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.SubTotal" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Freight
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.Freight" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Tax
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.Tax" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  TotalAmount
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.TotalAmount" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  Payment
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.Payment" />
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">
+                  InvoiceAmount
+                </label>
+                <input type="text" class="form-control input-sm" [(ngModel)]="invoiceData.InvoiceAmount" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Panel Hdr Partners-->
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <div class="inline block text-center">
+            <h4 class="panel-title font-weight-bold">HDR Partners</h4>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="panel panel-default" *ngFor="let item of invoiceData.HdrPartner">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label class="control-label">
+                    Address Type
+                  </label>
+                  <input type="text" class="form-control input-sm" [(ngModel)]="item.Type" readonly />
+                </div>
+              </div>
+              <div class="col-sm-9">
+                <label class="control-label">
+                  Address
+                </label>
+                <textarea rows="3" class="form-control" readonly style="margin:0px 10px 10px 0px;">
+                  {{item.NAME1}}  {{item.Street}}
+                  {{item.City}}  {{item.PostalCode}}
+                  {{item.Country}}  {{item.Language}}
+                  {{item.Number}}
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Item panel-->
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <div class="inline block text-center">
+            <h4 class="panel-title font-weight-bold">Item Generation</h4>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div style="overflow-x: scroll; overflow-y: auto;">
+            <table id="dt" class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="width: 75px;"></th>
+                  <th class="tableRow">Item Number</th>
+                  <th class="tableRow">Quantity</th>
+                  <th class="tableRow">UOM</th>
+                  <th class="tableRow">Net Value</th>
+                  <th class="tableRow">Description</th>
+                  <th class="tableRow">Weight Unit</th>
+                  <th class="tableRow">Total Weight</th>
+                  <th class="tableRow">Total Price</th>
+                  <th class="tableRow">Plant</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let item of invoiceData.ItmGenData;let indx=index;">
+                  <td style="width: 75px;">
+                      <div class="form-group text-center" style="cursor: pointer;">
+                        <span class="fa fa-close" (click)="removeItems(indx)"></span>
+                      </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.ItmNum" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.Quantity" />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.UOM" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.NetItmValue" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.Description" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.WgtUnit" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.TotalWgt" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.TotalItemPrice" />
+                    </div>
+                  </td>
+                  <td class="tableRow">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-sm" [(ngModel)]="item.Plant" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="block">
+            <br />
+            <button id="addItems" class="btn btn-warning btn-sm pull-right" (click)="AddItmGenData()">
+              Add Items</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Panel Summary-->
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <div class="inline block text-center">
+            <h4 class="panel-title font-weight-bold">Summary</h4>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-3 col-sm-offset-1"> <label class="control-label text-center">
+                Qualifier
+              </label>
+            </div>
+            <div class="col-sm-4"><label class="control-label text-center"  style="padding-left: 25px;">
+                TotalValue
+              </label>
+            </div>
+            <div class="col-sm-4"><label class="control-label text-center">
+                Currency
+              </label>
+            </div>
+          </div>
+            <div class="row"  *ngFor="let item of invoiceData.SummarySeg;let indx=index;">
+
+              <div class="col-sm-1">
+                <div class="form-group text-center" style="cursor: pointer;">
+                  <span class="fa fa-close" (click)="removeSummary(indx)"></span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <input type="text" class="form-control input-sm" [(ngModel)]="item.Qualifier" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <input type="text" class="form-control input-sm" style="width: 100%;" [(ngModel)]="item.TotalValue" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group center">
+                  <input type="text" class="form-control input-sm" style="width: 100%;" [(ngModel)]="item.Curr" />
+                </div>
+              </div>
+
+              <hr/>
+            </div>
+          <div class="row">
+            <button class="btn btn-warning btn-sm pull-right" style="margin-right: 15px;" (click)="AddSummary()">Add
+              Summary</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group">
+        <button class="btn btn-danger" style="margin: 5px;" (click)="Save()">Save Invoice</button>
+        <button class="btn btn-danger" style="margin: 5px;" (click)="Cancel()">Cancel</button>
+      </div>
+    </div>
+    <div id="pdf" class="col-sm-6">
+      <div class="panel panel-warning" style="height: 100%;">
+        <div class="panel-heading">
+          <div class="inline block text-center">
+            <h4 class="panel-title font-weight-bold">Invoice Document</h4>
+          </div>
+        </div>
+        <div class="panel-body">
+           <iframe class="embed-responsive-item"  [src]="pdfData" allowfullscreen> </iframe>
+          <!-- <embed width="100%" height="100%" [src]="pdfData" type="application/pdf" /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #modalTemplate>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{modalHeader}}</h4>
+  </div>
+  <div class="modal-body">
+    {{modalMsg}}
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="confirm()" >{{showCancel?'YES':'OK'}}</button>
+    <button type="button" *ngIf="showCancel" class="btn btn-default" (click)="cancel()" >NO</button>
+  </div>
+</ng-template>
+<div *ngIf="loading" class="loader"></div>

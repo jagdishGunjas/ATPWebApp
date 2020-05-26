@@ -1,0 +1,53 @@
+.panel{
+  /* border: 2px solid black; */
+  box-shadow: 1.5px 3px;
+}
+
+.panel-heading{
+  background-color:rgb(247, 173, 36);;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: fantasy;
+}
+
+.panel-body{
+  background-color:black;
+  color: silver;
+  font-weight: bold;
+  height: 150px;
+  position: relative;
+}
+
+.panel-body p{
+ position: absolute;
+ bottom: 0;
+ left: 10;
+}
+
+.panel-footer{
+  background-color:rgb(233, 147, 41);
+  color: silver;
+  font-weight: bold;
+}
+.container-fluid{
+margin-top: 5%;
+}
+.badge {
+display: inline-block;
+min-width: 20px;
+padding: 6px;
+font-size: 20px;
+font-weight: bold;
+line-height: 2;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+background-color: black;
+border-radius: 3px;
+width:100%;
+margin-bottom:5%;
+border-left: 8px solid rgb(247, 173, 36);
+border-right: 8px solid rgb(247, 173, 36);
+}

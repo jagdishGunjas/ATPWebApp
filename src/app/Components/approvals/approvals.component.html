@@ -1,0 +1,37 @@
+<div id="contentDiv">
+  <div class="container-fluid" *ngIf="!showInvoiceData">
+  <span class="badge">My Approvals</span>
+
+  <ag-grid-angular
+          #agGrid
+          style="width: 100%; height:490px;"
+          id="myGrid"
+          class="ag-theme-alpine"
+          [columnDefs]="columnDefs"
+          [rowData]="rowData"
+          [context]="context"
+          [frameworkComponents]="frameworkComponents"
+          [defaultColDef]="defaultColDef"
+          (gridReady)="onGridReady($event)">
+  </ag-grid-angular>
+  </div>
+
+  <app-approvals-edit [invoiceData]="invoiceData" [invoiceRowData]="invoiceRowData" *ngIf="showInvoiceData"
+   (showInvoice)="handleCancel($event)">
+  </app-approvals-edit>
+
+  <ng-template #modalApproval>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Error</h4>
+    </div>
+    <div class="modal-body">
+      Xml document format issue
+     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="ok()" >OK</button>
+    </div>
+  </ng-template>
+
+  <div *ngIf="loader" class="loader"></div>
+  </div>
+
